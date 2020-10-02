@@ -1,6 +1,6 @@
 @echo off
 :b
-title cmdOS 1 (Guest)
+title cmdOS 2 (Guest)
 color 0e
 echo Hello, Guest!
 echo.
