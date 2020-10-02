@@ -1,7 +1,7 @@
 @echo off
 title Timer
-set m=4
-set s=50
+set m=0
+set s=0
 cd..
 cls
 cmdmenusel f870 "5 minutes" "10 minutes"
