@@ -9,6 +9,7 @@ cmdmenusel e870 "Timer" "Calculator"
 if %errorlevel%==1 cd guest && start timer.bat
 if %errorlevel%==2 cd guest && start calculator.bat
 cd..
+cls
 goto a
                                                                                                                                                                                                                                                                                                                                                                     
 

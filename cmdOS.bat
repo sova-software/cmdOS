@@ -67,6 +67,5 @@ type NUL > %name%.acc
 cd..
 goto ag
 :ag
-cd..
 start e.bat %name%
 exit
