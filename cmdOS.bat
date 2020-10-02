@@ -1,5 +1,5 @@
 @echo off
-title cmdOS 1
+title cmdOS 2
 :start
 cls
 cmdmenusel f870 "Register" "Login as User" "Login as Guest"
