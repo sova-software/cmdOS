@@ -1,6 +1,6 @@
 @echo off
-:b
-title cmdOS 2 (Guest)
+:a
+title cmdOS 3 (Guest)
 color 0e
 echo Hello, Guest!
 echo.
@@ -10,7 +10,7 @@ if %errorlevel%==1 cd guest && start timer.bat
 if %errorlevel%==2 cd guest && start calculator.bat
 cd..
 cls
-goto b
+goto a
                                                                                                                                                                                                                                                                                                                                                                     
 
 
