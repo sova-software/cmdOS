@@ -1,5 +1,5 @@
 @echo off
-title cmdOS 2
+title cmdOS 3
 :start
 cls
 cmdmenusel f870 "Register" "Login as User" "Login as Guest"
@@ -40,7 +40,7 @@ attrib +h .acc
 :hop
 cd .acc
 set /p name=Username: 
-if exist %name%.acc exit
+if exist %name%.acc (set err=USER_EXISTS && goto bsod)
 cls
 type NUL > %name%.acc
 echo Do you want to set a password?
@@ -69,3 +69,12 @@ goto ag
 :ag
 start e.bat %name%
 exit
+:bsod
+cls
+color 1f
+echo OPERATION FAILED
+echo ERROR CODE: %err%
+pause >NUL
+goto start
+:system
+start e.bat %name%
