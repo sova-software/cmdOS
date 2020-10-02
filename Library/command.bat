@@ -1,5 +1,5 @@
 @echo off
-set ver=1.1
+set ver=2.0
 cls
 color 0a
 ver
