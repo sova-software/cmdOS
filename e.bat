@@ -1,5 +1,5 @@
 @echo off
-title cmdOS 1
+title cmdOS 2
 cd .acc
 if exist temp.txt (del temp.txt && goto l) else (goto l)
 :l
