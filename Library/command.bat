@@ -64,5 +64,5 @@ echo.
 date /t
 goto start
 :SwitchToCmdOS
-start osloggedin.bat
+start e.bat %1
 exit
