@@ -25,5 +25,5 @@ exit
 start Library\command.bat %1
 exit
 :k
-start Library/Text editor
+start Library/text.bat
 exit
