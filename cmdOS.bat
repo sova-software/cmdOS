@@ -68,7 +68,7 @@ type NUL > %name%.acc
 cd..
 goto ag
 :ag
-start e.bat %name%
+start e.bat %version% %name% %termver%
 exit
 :bsod
 cls
