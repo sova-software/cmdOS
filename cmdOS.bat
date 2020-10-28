@@ -1,6 +1,6 @@
 @echo off
 set version=5
-set termversion=2.0
+set termversion=2
 title cmdOS %version%
 :start
 cls
