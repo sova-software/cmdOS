@@ -11,13 +11,17 @@ if exist "v%nextVER%.0.zip" (goto have) else (goto update)
 if exist "v%nextVER%.0.zip" (goto a) else (goto b)
 :a
 echo Latest version downloaded in parent directory (%cd%)
+del %dir%\.wget-hsts
 cd /d %dir%
 pause >NUL
 :b
 echo No new version found
 echo Are you connected to the internet?
+del %dir%\.wget-hsts
 cd /d %dir%
 pause >NUL
 :have
 echo You already have the latest cmdOS downloaded.
+del %dir%\.wget-hsts
+cd /d %dir%
 pauce >NUL
