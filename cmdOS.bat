@@ -1,5 +1,7 @@
 @echo off
-title cmdOS 4
+set version=5
+set termversion=2.0
+title cmdOS %version%
 :start
 cls
 cmdmenusel f870 "Register" "Login as User" "Login as Guest"
@@ -21,7 +23,7 @@ if "%Correct%"=="" (goto system) else (goto zaz)
 set /p writpass=Password: 
 cd .acc
 EncryptFile.exe unlock %writpass% %name%.acc temp.txt
-if %errorlevel%==0 (goto ag) else (goto qns)
+if %errorlevel%==0 (cd.. & goto ag) else (goto qns)
 :qns
 echo Wrong Password!
 timeout /t 3 /NOBREAK>NUL
@@ -29,9 +31,8 @@ cd..
 goto start
 :error 
 cd..
-echo Account %name% does not exist.
-timeout /t 4 /NOBREAK>NUL
-goto start
+set err=USER_DOES_NOT_EXIST
+goto bsod
 :Register
 cls
 if exist .acc (goto hop) 
@@ -40,7 +41,7 @@ attrib +h .acc
 :hop
 cd .acc
 set /p name=Username: 
-if exist %name%.acc (set err=USER_EXISTS && goto bsod)
+if exist %name%.acc (set err=USER_ALREADY_EXISTS && goto bsod)
 cls
 type NUL > %name%.acc
 echo Do you want to set a password?
@@ -77,4 +78,4 @@ echo ERROR CODE: %err%
 pause >NUL
 goto start
 :system
-start e.bat %name%
+start e.bat %version% %name% %termversion%
